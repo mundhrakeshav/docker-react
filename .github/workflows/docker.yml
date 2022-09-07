@@ -18,4 +18,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile.dev --tag mundhrakeshav/frontend
     - name: Run tests
-      run: docker run mundhrakeshav/frontend npm run test
+      run: docker run -e CI=true mundhrakeshav/frontend npm run test
